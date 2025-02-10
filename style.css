@@ -44,13 +44,14 @@ nav {
   gap: 2rem;
 }
 
-.logo{
-color: #fff;
-font-family: 'Oswald', sans-serif;
-font-size: 1.7rem;
-font-weight: 600;
-letter-spacing: 1px;
+.logo {
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
+
 .logo {
   width: 150px; /* Adjust as needed */
   height: 40px; /* Set the desired cropped height */
@@ -58,10 +59,11 @@ letter-spacing: 1px;
   object-position: 50% 45%; /* Shift down a bit */
   overflow: hidden; /* Hide the overflowing parts */
 }
+
 nav a {
-font-size: 1.0rem;
-font-weight: 600;
-letter-spacing: 0.5px;
+  font-size: 1.0rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   padding: 0.5rem 0.8rem;
   border-radius: 4px;
   transition: background-color 0.3s;
@@ -69,65 +71,65 @@ letter-spacing: 0.5px;
 
 nav a:hover {
   color: #afdbff;
-background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Enlarge Button-like Elements on Hover */
 a.social-link, /* Target social media links */
 nav a { /* Target navigation links */
-    display: inline-block; /* Ensure transform works correctly */
-    transition: transform 0.2s ease-in-out; /* Add a smooth transition */
+  display: inline-block; /* Ensure transform works correctly */
+  transition: transform 0.2s ease-in-out; /* Add a smooth transition */
 }
 
 a.social-link:hover,
 nav a:hover {
-    transform: scale(1.1); /* Enlarge by 10% on hover */
+  transform: scale(1.1); /* Enlarge by 10% on hover */
 }
 
 /* Underline Effect for Social Links and Header Nav */
 
 /* Social Links */
 a.social-link {
-    position: relative; /* Required for pseudo-element positioning */
-    text-decoration: none; /* Remove default underline */
-    /* Add other social link styles here (color, etc.) */
+  position: relative; /* Required for pseudo-element positioning */
+  text-decoration: none; /* Remove default underline */
+  /* Add other social link styles here (color, etc.) */
 }
 
 a.social-link::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px; /* Adjust position as needed */
-    width: 0;
-    height: 1.5px; /* Underline thickness */
-    background-color: #00bfff; /* Underline color (adjust to match link color) */
-    transition: width 0.3s ease; /* Animation */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjust position as needed */
+  width: 0;
+  height: 1.5px; /* Underline thickness */
+  background-color: #00bfff; /* Underline color (adjust to match link color) */
+  transition: width 0.3s ease; /* Animation */
 }
 
 a.social-link:hover::before {
-    width: 100%; /* Underline full width on hover */
+  width: 100%; /* Underline full width on hover */
 }
 
 /* Header Navigation Links */
 nav a {
-    position: relative; /* Required for pseudo-element positioning */
-    text-decoration: none; /* Remove default underline */
-    /* Add other nav link styles here (color, etc.) */
+  position: relative; /* Required for pseudo-element positioning */
+  text-decoration: none; /* Remove default underline */
+  /* Add other nav link styles here (color, etc.) */
 }
 
 nav a::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px; /* Adjust position as needed */
-    width: 0;
-    height: 2px; /* Underline thickness */
-    background-color: #00bfff; /* Underline color (adjust to match link color) */
-    transition: width 0.3s ease; /* Animation */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjust position as needed */
+  width: 0;
+  height: 2px; /* Underline thickness */
+  background-color: #00bfff; /* Underline color (adjust to match link color) */
+  transition: width 0.3s ease; /* Animation */
 }
 
 nav a:hover::before {
-    width: 100%; /* Underline full width on hover */
+  width: 100%; /* Underline full width on hover */
 }
 
 /* Underline Effect for Social Links, Header Nav, LinkedIn, and Contact Page Links */
@@ -173,11 +175,11 @@ nav a::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -3px;
+  bottom: -3px; /* Adjust position as needed */
   width: 0;
-  height: 2px;
+  height: 2px; /* Underline thickness */
   background-color: #00bfff; /* Match nav link color */
-  transition: width 0.3s ease;
+  transition: width 0.3s ease; /* Animation */
 }
 
 nav a:hover {
@@ -290,266 +292,277 @@ nav a:hover::before {
 
 /* Hero Section (Keep these) */
 .hero {
-padding: 2rem;
-display: flex;
-align-items: center;
-background-image: url('https://i.postimg.cc/90NcGnyg/Header-0-5-S.gif');
-background-size: 100%;
-background-repeat: no-repeat;
-background-position: center 60%;
- overflow: hidden;
-   justify-content: flex-end;
-   min-height: 220px; /*  ADDED THIS LINE:  Set the minimum height here (e.g., 600px) */
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: flex-end;
+  min-height: 220px;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.0);
+  z-index: 1;
 }
 
 .hero-content {
-flex-basis: 60%;
-padding-right: 4rem;
-text-align: center;
-display: flex;
-flex-direction: column;
-align-items: center;
+  flex-basis: 60%;
+  padding-right: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-.hero h1, .hero h2{
-text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+.hero h1, .hero h2 {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
 }
 
 .hero h1 {
-font-family: 'Oswald', sans-serif;
-font-size: 4.2rem;
-margin-bottom: 0rem;
-font-weight: 600;
-letter-spacing: 0.2rem;
-text-transform: uppercase;
-font-style: italic;
-color: #000;
+  font-family: 'Oswald', sans-serif;
+  font-size: 4.2rem;
+  margin-bottom: 0rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-style: italic;
+  color: #000;
 }
 
 .hero h2 {
-font-family: 'Oswald', sans-serif;
-font-style: italic;
-font-weight: 600;
-letter-spacing: 0.1rem;
-line-height: 1.4;
-font-size: 1.4rem;
- text-transform: uppercase;
-color: #fff;
-background-color: #000;
-padding: 0.3rem 0.5rem;
-display: inline-block;
-border-radius: 4px;
+  font-family: 'Oswald', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  line-height: 1.4;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #000;
+  padding: 0.3rem 0.5rem;
+  display: inline-block;
+  border-radius: 4px;
 }
 
 .hero p {
-font-size: 1.2rem;
-max-width: 700px;
-margin: 0 auto;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* Contact Hero Section (Modified) */
 .contact-hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh; /*Ensures minimum height */
-    background-image: url("https://i.postimg.cc/gcBpt16N/Contact-0-5.gif");
-    background-size: cover;  /* Cover the entire area */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating */
-    color: #fff; /* Set text color for better visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
 }
 
 .contact-hero .contact-content h2 {
-  font-size: 1.9rem;  /* Adjust this value to your desired size */
+  font-size: 1.9rem;
 }
 
 .contact-hero .contact-content {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background for text */
-    margin-top: 8.5rem;
-    padding: 1.5rem;
-    border-radius: 9px;
-    text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 8.5rem;
+  padding: 1.5rem;
+  border-radius: 9px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-hero .contact-content a {
-    color: #6fb8f5; /* A lighter color for links */
+  color: #6fb8f5;
 }
 
 .contact-hero .contact-content a:hover {
-    color: #00bfff;  /* Slightly different hover color */
+  color: #00bfff;
 }
 
 /* Main Content Sections (No Changes Here) */
 main {
-padding: 0;
-max-width: 100%;
-margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 main > section {
-display: flex;
-padding: 0rem;
-width: 100%;
-margin-bottom: 0;
-min-height: 600px;
-    align-items: flex-start;
+  display: flex;
+  padding: 0rem;
+  width: 100%;
+  margin-bottom: 0;
+  min-height: 600px;
+  align-items: flex-start;
+  position: relative; /* VERY IMPORTANT for video positioning */
+  overflow: hidden;  /* Clip video if it overflows */
 }
 
 /* Section Specific Styles (No Changes Here) */
 .content-creator {
-flex-direction: row;
-   background-image: url('https://i.postimg.cc/tRrRQY8d/Sect1-0-5.gif');
-background-size: cover;
-    background-repeat: no-repeat;
-background-position: center;
-color: #fff;
-justify-content: flex-start;
-    min-height: 600px;
-     overflow: hidden; /* Add this line for cropping */
-    padding-top: 1rem;   /* Adjust this to crop the top */
-    padding-bottom: 1rem;  /* Adjust this to crop the bottom */
+  flex-direction: row;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  justify-content: flex-start;
+  min-height: 600px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .actor {
-   flex-direction: row-reverse;
-  background-image: url('https://i.postimg.cc/kgS7bwGw/Sect3-0-5.gif'); /* Updated background image here */
+  flex-direction: row-reverse;
   background-size: cover;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: center;
-   color: #fff;
-  overflow: hidden;
-   align-items: flex-start;
-gap: 2rem;
-padding: 3rem;
-justify-content: space-between;
+  color: #fff;
+  gap: 2rem;
+  padding: 3rem;
+  justify-content: space-between;
+
 }
+
 .actor h2 {
-  visibility: hidden; /* Hide the "Actor" heading */
+  visibility: hidden;
   opacity: 0;
 }
 
 .actor p {
-  visibility: hidden; /* Hide the paragraphs */
-   opacity: 0;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .communications-professional {
-flex-direction: row;
-background-image: url('https://i.postimg.cc/NMw6wszt/CONTENT-CREATOR-3.gif'); /* Updated background image here */
-background-size: cover;
-    background-repeat: no-repeat;
-background-position: center;
-color: #fff;
-align-items: flex-start;
+  flex-direction: row;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  align-items: flex-start;
 }
 
 /*NEW CSS*/
 .communications-professional .communications-content {
-  flex-basis: 65%; /* Allow text to take up remaining space */
+  flex-basis: 65%;
   padding-left: 2rem;
 }
 
 /*Style new text block container, and remove background*/
 .communications-professional .communications-content .text-blocks {
-    padding: 5px; /* Add the padding back*/
-    border-radius: 4px; /*Add border radius */
-      display: flex; /* set to flex*/
-   flex-direction: column; /* set to column*/
+  padding: 5px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
 }
-   .communications-professional .communications-content .text-blocks p {
- display: block;  /*cover the entire section*/
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 35px;
-    border-radius: 24px;
-   width: auto; /*cover the entire section*/
-   margin-top: 0.4rem; /*Reduced top margin*/
-   margin-bottom: 0.4rem; /*Reduced bottom margin*/
-     white-space: pre-line; /* Preserve line breaks */
-     text-align: left;  /* Set the text to align to the left*/
+
+.communications-professional .communications-content .text-blocks p {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 35px;
+  border-radius: 24px;
+  width: auto;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  white-space: pre-line;
+  text-align: left;
 }
 
 /* Style skill container*/
-.communications-professional .communications-content .text-blocks  .skills{
-    list-style-type: none; /* Remove bullets */
-    margin-left: 0; /* Remove indentation */
-      display: flex;        /* Set to flex*/
-   flex-wrap: wrap;     /* Break into new line*/
-   width: 100%;         /* set to 100%*/
-       background-color: rgba(0, 0, 0, 0.9);    /* Re-add the background color */
-       padding: 35px;   /* Add the spacing back*/
-    border-radius: 24px; /*Add border radius */
-    box-sizing: border-box; /* Ensure consistent sizing with padding and border */
-    line-height: 0.8; /* Reduced line height here */
+.communications-professional .communications-content .text-blocks .skills {
+  list-style-type: none;
+  margin-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 35px;
+  border-radius: 24px;
+  box-sizing: border-box;
+  line-height: 0.8;
 }
-.communications-professional .communications-content .text-blocks  .skills li {
-    margin-bottom: 5px; /* Add spacing between list items */
-    display: list-item; /* Set display to list-item*/
-         width: 50%;            /* Two columns */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    padding-right: 10px;  /* Add some spacing between columns */
+
+.communications-professional .communications-content .text-blocks .skills li {
+  margin-bottom: 5px;
+  display: list-item;
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 10px;
 }
+
 /*Style bold*/
 .communications-professional .communications-content strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 main h2 {
-margin-top: 9rem; /* Change the margin top to align with the new padding on the parent */
-font-size: 3.1rem;
- font-weight: 700;
- flex-basis: 25%;
-text-align: left;
-font-family: 'Oswald', sans-serif;
-   text-transform: uppercase;
-     font-style: italic;
-flex-shrink: 0;
+  margin-top: 9rem;
+  font-size: 3.1rem;
+  font-weight: 700;
+  flex-basis: 25%;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  flex-shrink: 0;
 }
 
-.actor h2, .communications-professional h2{
-/*REMOVE TEXT ALIGN*/
-margin-right: 1.3rem;
-flex-basis: 9%;
+.actor h2, .communications-professional h2 {
+  margin-right: 1.3rem;
+  flex-basis: 9%;
   border: 5px solid #fff;
   padding: 24px;
-    background-color: rgba(0, 0, 0, 0.88); /* semi-transparent black background */
+  background-color: rgba(0, 0, 0, 0.88);
 }
 
-main > section > div:not(h2){
-flex-basis: 75%;
-padding-left: 2rem;
-/*REMOVE THIS PROPERTY*/
+main > section > div:not(h2) {
+  flex-basis: 75%;
+  padding-left: 2rem;
 }
 
 .actor > div:not(h2) {
-padding-left: 0;
-padding-right: 2rem;
-text-align: right;
+  padding-left: 0;
+  padding-right: 2rem;
+  text-align: right;
   flex-basis: 5%;
- display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-align-items: flex-end;
+  align-items: flex-end;
 }
 
 .actor > div:not(h2) > p {
-text-align: left;
- margin-bottom: 0rem;
-   white-space: normal;
-  background-color: rgba(0, 0, 0, 0.88); /* semi-transparent black background */
-  padding: 18px; /* Added padding for visual spacing */
-  border-radius: 15px; /* Added border radius for rounded edges */
+  text-align: left;
+  margin-bottom: 0rem;
+  white-space: normal;
+  background-color: rgba(0, 0, 0, 0.88);
+  padding: 18px;
+  border-radius: 15px;
 }
 
 .actor > div:not(h2) > p:first-child {
   margin-bottom: 0rem;
 }
+
 /* Text container for actor*/
 .actor .actor-text-container {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 main p {
   font-size: 1.35rem;
   line-height: 1.4;
@@ -557,152 +570,156 @@ main p {
   margin-top: 5.5rem;
   margin-bottom: 0px;
   flex-grow: 1;
-    background-color: transparent; /* Make the background only as wide as the text */
+  background-color: transparent;
 }
 
 .video-container iframe {
   max-width: 100%;
   height: 400px;
-   outline: none;
+  outline: none;
   box-shadow: none;
 }
 
-.content-creator  blockquote.tiktok-embed {
+.content-creator blockquote.tiktok-embed {
   margin-left: auto;
-   margin-right: -110px;
-      max-width: 300%;
-        min-width: 00px;
-display: flex;
-justify-content: flex-end;
-    align-self: flex-start;
+  margin-right: -110px;
+  max-width: 300%;
+  min-width: 00px;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-start;
 }
 
-.content-creator  blockquote.tiktok-embed > section {
+.content-creator blockquote.tiktok-embed > section {
   padding: 0;
   border: none;
 }
-.content-creator  blockquote.tiktok-embed iframe{
+
+.content-creator blockquote.tiktok-embed iframe {
   outline: none;
-box-shadow: none;
-width: 300px !important;     /* Added !important */
-height: 550px !important;    /* Added !important */
+  box-shadow: none;
+  width: 300px !important;
+  height: 550px !important;
 }
 
-.content-creator  blockquote.tiktok-embed iframe{
-     outline: none;
+.content-creator blockquote.tiktok-embed iframe {
+  outline: none;
   box-shadow: none;
 }
 
 /* Social media link style*/
 .content-creator .content-container {
-  margin-top: 100px;
-  margin-left: 58px;
-display: flex;
-flex-direction: column;
-flex-grow: 1;
-text-align: left; /* ADDED THIS LINE */
+  margin-top: 115px;
+  margin-left: -230px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
 
 }
 
 .content-creator .content-container .social-links {
-display: flex;
-align-items: center;
-margin-bottom: 0.5rem;
-justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  justify-content: flex-start;
 }
 
 .content-creator .content-container .social-logo {
-margin-right: 2px;
- width: 2.2rem;
- height: 2.2rem;
-display: inline-block;
+  margin-right: 6px;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: inline-block;
 }
 
 .content-creator .content-container .social-text {
-font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 main > section > div.graphics {
-padding: 2rem 0;
+  padding: 2rem 0;
 }
 
 /* Video layout for actor */
 .actor .video-container {
   margin-bottom: 0rem;
-display: flex;
-flex-basis: 100%;
+  display: flex;
+  flex-basis: 100%;
   align-items: flex-start;
   flex-grow: 1;
+  /*z-index: 1;   Bring the container FORWARD */
+  /*position: relative;    New Addition: Allow iFrame to respond to container's position */
 }
 
-
 .actor .video-container iframe {
-width: 100%;
+  width: 100%;
   object-fit: contain;
   max-height: 100%;
   max-width: 100%;
+  /*z-index: 10;  New Addition: Ensure the iframe is ALWAYS in Front */
 }
 
 /* Footer (Modified) */
 footer {
   text-align: center;
   padding: 0.35rem;
-  /*background-color: #2c2c2c;  Remove this line */
-  background-color: rgba(0, 0, 0, 0.5); /* Add this line for translucent black */
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  position: relative; /* Keep this if it was already there */
-  backdrop-filter: blur(3px); /* Add this line for the blur effect */
+  position: relative;
+  backdrop-filter: blur(3px);
 }
 
 /* Hero Section Styles */
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for darkness */
-    z-index: -1; /* Place behind the hero content */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.0);
+  z-index: 1;
 }
 
 /* Social media link style*/
 .social-links a:hover {
- text-decoration: none;
+  text-decoration: none;
 }
 
 /* Responsive Design (No Changes Here) */
 @media (min-width: 768px) {
-nav {
-justify-content: flex-end;
-}
-.hero {
-    padding: 3rem;
-}
+  nav {
+      justify-content: flex-end;
+  }
 
- main > section {
-  padding: 2rem;
-    min-height: 500px;
-}
-.video-container iframe{
-    height: 400px;
-}
+  .hero {
+      padding: 3rem;
+  }
+
+  main > section {
+      padding: 2rem;
+      min-height: 500px;
+  }
+
+  .video-container iframe {
+      height: 400px;
+  }
 }
 
 /* LinkedIn Link Styles - Absolute Positioning */
 .communications-professional .linkedin-link {
-    position: absolute; /* Absolutely position the link */
-    top: 108rem;  /*THIS IS DEPENDENT ON MY SECTION*/
-    left: 8%;   /*THIS IS DEPENDENT ON MY SECTION*/
+  position: absolute;
+  top: 22rem;
+  left: 8%;
 }
 
 .communications-professional .linkedin-link a {
-    display: inline-flex; /* Align image and text */
-    align-items: center; /* Vertically center items */
-    gap: 15px; /* Space between logo and text */
-    color: #007bff; /* LinkedIn blue */
-    text-decoration: none; /* Remove underline */
-    font-size: 1.3rem; /* ADJUST THIS VALUE TO CHANGE FONT SIZE */
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.3rem;
 }
 
 
@@ -710,205 +727,312 @@ justify-content: flex-end;
 a.social-link, /* Target social media links */
 nav a, /* Target navigation links */
 .communications-professional .linkedin-link a { /* Target LinkedIn link */
-    display: inline-flex; /* Use inline-flex for LinkedIn link */
-    align-items: center; /* Vertically align LinkedIn link content */
-    transition: transform 0.2s ease-in-out; /* Add a smooth transition */
+  display: inline-flex; /* Use inline-flex for LinkedIn link */
+  align-items: center; /* Vertically align LinkedIn link content */
+  transition: transform 0.2s ease-in-out; /* Add a smooth transition */
 }
 
 a.social-link:hover,
 nav a:hover,
 .communications-professional .linkedin-link a:hover {
-    transform: scale(1.1); /* Enlarge by 10% on hover */
+  transform: scale(1.1); /* Enlarge by 10% on hover */
 }
 
 .communications-professional .linkedin-link img {
-    width: 50px;
-    height: 50px;
-    vertical-align: middle; /* Align logo with text */
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
 }
 
 /* Contact Info Styles */
 .contact-info {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.4rem; /* Match the h2 font size */
-    font-style: ;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    line-height: 1.4;
-    text-transform: uppercase;
-    color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem; /* Match the h2 font size */
+  font-style: ;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 /* Example Media Query for Mobile Devices */
-@media (max-width: 768px) { /* Adjust this breakpoint as needed */
+@media (max-width: 768px) {
 
-  /* --- General adjustments --- */
   body {
-    font-size: 16px; /* Adjust base font size for mobile readability */
+      font-size: 16px;
   }
 
-  /* --- Header Adjustments (if needed) --- */
+
   header {
-    padding: 0.5rem 1rem; /* Reduce padding on mobile */
+      padding: 0.5rem 1rem;
   }
 
   nav {
-    flex-direction: column; /* Stack navigation items on mobile */
-    align-items: flex-start; /* Align items to the left */
-    margin-right: 0;      /* Remove right margin*/
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 0;
   }
 
   nav a {
-    padding: 0.5rem;       /* Reduce nav link spacing */
-    font-size: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
   }
 
-  /* --- Hero Section Adjustments --- */
+
   .hero {
-    padding: 1rem;          /* Reduce hero section padding */
-    background-position: center top; /* Adjust background position */
-    min-height: auto;        /* Reset min-height */
+      padding: 1rem;
+      background-position: center top;
+      min-height: auto;
   }
 
   .hero h1 {
-    font-size: 3rem;        /* Adjust hero heading size */
-    margin-bottom: 0.5rem;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
   }
 
   .hero h2 {
-    font-size: 1.2rem;      /* Adjust hero subheading size */
+      font-size: 1.2rem;
   }
 
   .hero p {
-    font-size: 1rem;        /* Adjust hero paragraph size */
+      font-size: 1rem;
   }
 
-  /* --- Main Content Section Adjustments --- */
+
   main > section {
-    padding: 1rem;          /* Reduce padding on main sections */
-    min-height: auto;        /* Reset min-height */
-    flex-direction: column;  /* Stack sections vertically if needed*/
+      padding: 1rem;
+      min-height: auto;
+      flex-direction: column;
   }
 
   main h2 {
-    font-size: 2rem;        /* Adjust heading size in main sections */
-    margin-top: 2rem;      /* Adjust heading spacing */
-    flex-basis: auto;       /* Reset flex-basis */
-    text-align: left;      /*Ensure text is left aligned*/
+      font-size: 2rem;
+      margin-top: 2rem;
+      flex-basis: auto;
+      text-align: left;
   }
 
-    .actor h2, .communications-professional h2{
-        font-size: 1.5rem;        /* Adjust heading size in main sections */
-        flex-basis: auto;
-        margin-right: 0;
-        padding: 1rem;
-        border: 3px solid #fff;
-    }
+  .actor h2, .communications-professional h2 {
+      font-size: 1.5rem;
+      flex-basis: auto;
+      margin-right: 0;
+      padding: 1rem;
+      border: 3px solid #fff;
+  }
 
   main > section > div:not(h2) {
-    padding-left: 0;      /* Remove left padding */
-    flex-basis: auto;       /* Reset flex-basis */
+      padding-left: 0;
+      flex-basis: auto;
   }
 
   main p {
-    font-size: 1.1rem;      /* Adjust paragraph size in main sections */
-    margin-top: 1rem;      /* Adjust paragraph spacing */
+      font-size: 1.1rem;
+      margin-top: 1rem;
   }
 
   /* -- Content creator adjustment ---*/
-    .content-creator {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-    .content-creator .content-container {
-         margin-top: 10px; /* Adjust top margin */
-         margin-left: 10px; /* Adjust left margin */
-    }
-    .content-creator .content-container .social-links {
-        margin-bottom: 0.2rem;
-    }
-    .content-creator .content-container .social-text {
-        font-size: 0.8rem;
-    }
-    .content-creator blockquote.tiktok-embed {
-        margin-right: 0;
-    }
-    .content-creator blockquote.tiktok-embed iframe {
-        width: 100% !important; /* Make TikTok embed responsive */
-        height: 400px !important;
-    }
+  .content-creator {
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+
+  .content-creator .content-container {
+      margin-top: 10px;
+      margin-left: 10px;
+  }
+
+  .content-creator .content-container .social-links {
+      margin-bottom: 0.2rem;
+  }
+
+  .content-creator .content-container .social-text {
+      font-size: 0.8rem;
+  }
+
+  .content-creator blockquote.tiktok-embed {
+      margin-right: 0;
+  }
+
+  .content-creator blockquote.tiktok-embed iframe {
+      width: 100% !important;
+      height: 400px !important;
+  }
 
   /* -- Actor Section Adjustments ---*/
   .actor {
-        padding: 1rem;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .actor > div:not(h2) {
-        align-items: flex-start;
-        padding-right: 0;
-    }
-    .actor > div:not(h2) > p {
-        text-align: left;
-    }
-    .actor .video-container {
-        margin-bottom: 0;
-    }
-    .actor .video-container iframe {
-        height: auto; /* Allow height to adjust */
-    }
-    .actor h2 {
+      padding: 1rem;
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+  .actor > div:not(h2) {
+      align-items: flex-start;
+      padding-right: 0;
+  }
+
+  .actor > div:not(h2) > p {
+      text-align: left;
+  }
+
+  .actor .video-container {
+      margin-bottom: 0;
+  }
+
+  .actor .video-container iframe {
+      height: auto; /* Allow height to adjust */
+  }
+
+  .actor h2 {
       visibility: visible;
       opacity: 1;
       margin-top: 1rem;
-    }
+  }
 
-    .actor p {
+  .actor p {
       visibility: visible;
       opacity: 1;
-    }
-    /* LinkedIn Link Styles - Mobile Adjustments */
-    .communications-professional .linkedin-link {
-      position: static; /* Revert to normal positioning */
-      margin-top: 1rem; /* Add spacing */
-      text-align: center; /* Center the link */
-    }
+  }
 
-    .communications-professional .linkedin-link a {
-      font-size: 1rem; /* Smaller font size on mobile */
-      flex-direction: column; /* Stack icon and text */
-      align-items: center; /* Center items */
-    }
+  /* LinkedIn Link Styles - Mobile Adjustments */
+  .communications-professional .linkedin-link {
+      position: static;
+      margin-top: 1rem;
+      text-align: center;
+  }
 
-    .communications-professional .linkedin-link img {
-        width: 30px;
-        height: 30px;
-    }
+  .communications-professional .linkedin-link a {
+      font-size: 1rem;
+      flex-direction: column;
+      align-items: center;
+  }
 
-     /* Text block*/
-     .communications-professional .communications-content .text-blocks p{
-      padding: 15px; /* Reduced Padding*/
-    }
-    .communications-professional .communications-content .text-blocks .skills{
-        padding: 15px;
-    }
-        .communications-professional .communications-content .text-blocks  .skills li{
-            width: 100%;
-            padding-right: 0px;
-        }
+  .communications-professional .linkedin-link img {
+      width: 30px;
+      height: 30px;
+  }
 
-    /* -- Contact page ----*/
-     .contact-hero {
-          min-height: 60vh;
-      }
+  /* Text block*/
+  .communications-professional .communications-content .text-blocks p {
+      padding: 15px;
+  }
 
-      .contact-hero .contact-content h2 {
-        font-size: 1.4rem;
-      }
+  .communications-professional .communications-content .text-blocks .skills {
+      padding: 15px;
+  }
 
-      .contact-hero .contact-content {
-           margin-top: 4rem;
-           padding: 1rem;
-      }
+  .communications-professional .communications-content .text-blocks .skills li {
+      width: 100%;
+      padding-right: 0px;
+  }
 
+  /* -- Contact page ----*/
+  .contact-hero {
+      min-height: 60vh;
+  }
+
+  .contact-hero .contact-content h2 {
+      font-size: 1.4rem;
+  }
+
+  .contact-hero .contact-content {
+      margin-top: 4rem;
+      padding: 1rem;
+  }
+
+}
+
+/* General styles for all video backgrounds */
+.hero-video,
+.content-creator-video,
+.actor-video,
+.communications-professional-video,
+.contact-hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* or 'contain' if you don't want cropping */
+  z-index: 0;
+}
+
+/* Specific styling for contact hero */
+.contact-hero-video {
+  object-fit: cover; /* make sure video covers the area */
+}
+
+/*Hero video*/
+.hero-video {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover; /* or "contain" depending on your desired effect */
+z-index: 0; /* Place behind the content */
+}
+
+/*Content creator video*/
+.content-creator-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/*Actor video*/
+.actor-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/*Communications video*/
+.communications-professional-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/*Contact video*/
+.contact-hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+/* Restore YouTube Video in Actor Section */
+.actor .video-container {
+  position: relative; /* Allows absolute positioning within */
+  z-index: 1;        /* Ensure it's above the background */
+}
+
+.actor .video-container iframe {
+  position: relative; /* Ensures proper stacking context */
+  z-index: 2;        /* Ensure it's above the container and background */
+}
+
+.actor-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Push the video to the very back */
 }
